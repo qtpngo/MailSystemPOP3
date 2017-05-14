@@ -1,0 +1,19 @@
+From: hieu@ngoquang.com
+Time: 01-13-56_03-06-2016
+Subject: [Help] Network Programming
+Hello Ly.
+
+I am Hieu, class 12T2.
+
+My friend, Quang, has introduced me to you and I was glad to meet you. Hope you enjoyed our meeting in IT English club. I was strongly impressed with your attitude as well as your English.
+
+I send this email to you to ask you about Network Programming subject cause I know you are very good at it.
+
+I am working in a project which transfers data from one server to many clients using TCP. I know how to transfer from one server to one client and have already implemented it. But now, I am stuck in transfer from one server to many clients. My problem is when I finish transfer to the first client, then the connection would be close, and then the second will open connection to get data from server, but I cannot open connection to server anymore because it had already closed after first clients closed its connection. You can see it more in the attachment file.
+
+Have you got this problem before? I hope you can give me some advice.
+
+Have a nice day!
+
+Your new friend,
+Hieu Tran

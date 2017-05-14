@@ -1,0 +1,57 @@
+<%@page import="java.util.ArrayList"%>
+<%@ page import="utilities.*"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="UTF-8"%>
+<%	ArrayList<MessageListAdapter> listMessages = (ArrayList<MessageListAdapter>) request.getAttribute("listMessages"); 
+	String message = listMessages.isEmpty() ? "You have not sent any mail yet!" : "";
+%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="Quang Ngo">
+ 
+        <title>Sent</title>
+ 
+        <!-- Bootstrap Core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- jQuery -->
+        <script src="js/jquery.min.js"></script>
+
+        <!-- Bootstrap Code Javascript -->
+        <script src="js/bootstrap.min.js"></script>
+    </head>
+    <body>
+    	<div class="container-fluid">
+    		<div class="panel panel-success" style="margin: 10px auto;">
+    			<div class="panel-heading"><h4>Sent</h4></div>
+    			<div class="panel-body">
+    				<table class="table table-hover">
+    				<tr>
+    				<th>Subject</th>
+    				<th>To</th>
+    				<th>Time</th>
+    				</tr>
+    				<%
+    				for (MessageListAdapter messageListAdapter :  listMessages){
+    					
+    					%>
+    					<tr>
+    					<td><a href="OthersController?act=DetailSent&time=<%=messageListAdapter.getTime() %>"><%=messageListAdapter.getSubject() %></a></td>
+    					<td><%=messageListAdapter.getFrom() %></td>
+    					<td><%=messageListAdapter.getTime() %></td>
+    					</tr>
+    				<% } %>
+    				</table>
+    			</div>
+    			<div class="panel-footer">
+				<b style="color: red;"><%=message%></b>
+			</div>
+    		</div>
+    	</div>
+    </body>
+</html>

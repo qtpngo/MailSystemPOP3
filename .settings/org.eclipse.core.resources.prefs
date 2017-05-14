@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+encoding//WebContent/WEB-INF=UTF-8
+encoding//WebContent/img/banner.png=UTF-8
+encoding//src/mail/server/POPConnection.java=UTF-8
+encoding//src/mail/server/POPServer.java=UTF-8
+encoding//src/mail/server/SMTPConnection.java=UTF-8
+encoding//src/mail/server/SMTPServer.java=UTF-8
+encoding/<project>=UTF-8
+encoding/email.properties=UTF-8
